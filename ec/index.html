@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap.js" />
 		<style>
 			body{ margin: 0; padding: 0; }
-			.banner{ width: 100%;  }
+			.banner{ width: 100%;  position: relative; }
 			.banner>img{ display: block;}
 			.container-fluid{background-image: url(img/j1.png);  background-size: 100%;}
 			.bs{  border-radius: 5px; background-color: #fff; color: #666;  margin-bottom: 50px;}
@@ -34,11 +34,13 @@
 			.gg{padding: 0 25px ;  font-size: 14px; margin-bottom: 20px;}
 			.ee .fang a{ font-size: 14px;}
 			.quan{width: 100px; top:380px;  right: 0; height: 100px; border-radius: 150px; background: rgba(255,255,255,.4); position: absolute;}
+			.sj{ width: 30%; line-height: 30px; background: rgba(255,255,255,0.4); position: absolute; bottom:100px; left: 5%;padding-left: 10px;font-size: 20px; color: #fff;}
 		</style>
 	</head>
 	<body>
 		<div class="banner">
 			<img src="img/1.png" width="100%" alt="" />
+			<div class="sj">4月28日14：00——4月29日14：00</div>
 		</div>
 		<div class="container-fluid">
 		  <div class="row">
@@ -135,6 +137,16 @@
 		    	<p class="gg">带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画</p>
 		    	<p class="fang"><a href="#">中国经济网2019年一带一路</a></p>
 		    	<p class="gg">带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画带一路绽放功夫画</p>
+		    	
+		    	<div><img src="img/21.png" height="40px" alt="" /></div>
+		    	<div><img src="img/58.png" height="30px" alt="" /></div>
+		    	<div><img src="img/ajk.png" height="30px" alt="" /></div>
+		    	<div><img src="img/bk.png" height="30px" alt="" /></div>
+		    	<div><img src="img/lj.png" height="40px" alt="" /></div>
+		    	<div><img src="img/dk.png" height="41px" alt="" /></div>
+		    	<div><img src="img/mt.jpg" height="40px" alt="" /></div>
+		    	<div><img src="img/zr.jpg" height="40px" alt="" /></div>
+		    	<div><img src="img/zy.jpg" height="40px" alt="" /></div>
 			</div>
 		    
 		    
@@ -142,15 +154,24 @@
 		<script>
 		    			
 		    			function jk(){
+		    			var banner = document.querySelector(".banner")
+		    			var sj = document.querySelector(".sj")
 						var bs = document.querySelectorAll(".bs")
 		    			var fonts = document.querySelectorAll(".fonts")
 		    			var op = document.querySelectorAll(".fonts>img")
+		    			var lep = banner.clientHeight/10
+		    			var lhp = banner.clientWidth/40
+		    			sj.style.lineHeight=lhp*2+"px"
+		    			sj.style.bottom=lep*1.5+"px"
+		    			sj.style.width=lhp*20+"px"
+		    			sj.style.fontSize=lhp+"px"
+		    			
 		    			for(var i = 0; i<op.length;i++){
 		    			var ce=op[i].clientHeight;
 		    			bs[i].style.paddingTop=(ce/2)+10+"px"
 		    			bs[i].style.paddingBottom=(ce/2)+10+"px"
 		    			fonts[i].style.top=-(ce/2) + "px"
-		    			console.log(ce)
+		    			
 		    			}}
 		    			setTimeout("jk()",100)
 					setInterval(jk,1000)
